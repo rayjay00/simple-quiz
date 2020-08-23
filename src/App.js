@@ -16,7 +16,7 @@ const App = () => {
   const [state, setState] = useState(initialState);
   const { loaded, score, error, currentStep, currentQuestionSet } = state;
 
-  const currentQuestion = currentQuestionSet?.[currentStep];
+  const currentQuestion = currentQuestionSet[currentStep];
   const quizComplete = currentQuestionSet.length === currentStep + 1;
 
   const fetchQuestions = useCallback(async () => {
